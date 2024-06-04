@@ -1,3 +1,2 @@
 .vscode
-.env
-apikey.js
+.apikey

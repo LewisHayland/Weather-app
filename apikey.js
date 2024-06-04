@@ -1,3 +1,3 @@
-const api_key = "";
+const weather_api_key = "";
 
-export default api_key;
+export default weather_api_key;
