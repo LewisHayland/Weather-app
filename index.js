@@ -1,5 +1,4 @@
 function getWeather() {
-  const apiKey = '$'{proceess.eve.api_key}';
   const city = document.getElementById('city').value;
 
   if (!city) {
