@@ -1,6 +1,6 @@
-import {weather_api_key} from "./apikey.js";
-
 function getWeather() {
+    //Please add your own apikey below for this application to work!!
+    const apikey = process.env.weather_api_key;
     const city = document.getElementById('city').value;
 
     if (!city) {
@@ -8,8 +8,8 @@ function getWeather() {
         return;
     }
 
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weather_api_key}`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${weather_api_key}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}`;
 
     fetch(currentWeatherUrl)
         .then(response => response.json())
@@ -31,6 +31,7 @@ function getWeather() {
             alert('Error fetching hourly forecast data. Please try again.');
         });
 }
+
 
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
