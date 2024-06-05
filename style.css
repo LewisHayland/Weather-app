@@ -1,5 +1,5 @@
 body {
-    background: #a6be7aaf;
+    background: #8C52FF;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ input {
 }
 
 button {
-    background: #e4ab0f94;
+    background: #debff4;
     color: white;
     padding: 10px;
     border: none;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background: #ffffff;
+    background: #8b48d7;
 }
 
 #temp-div p {
