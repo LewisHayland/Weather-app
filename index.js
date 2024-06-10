@@ -1,15 +1,15 @@
 function getWeather() {
     //Please add your own apikey below for this application to work!!
-    const apikey = import.env.weather_api_key;
+    const apiKey = '';
     const city = document.getElementById('city').value;
 
-    if (!city) { 
+    if (!city) {
         alert('Please enter a city');
         return;
     }
 
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
     fetch(currentWeatherUrl)
         .then(response => response.json())
@@ -31,7 +31,6 @@ function getWeather() {
             alert('Error fetching hourly forecast data. Please try again.');
         });
 }
-
 
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
@@ -81,7 +80,7 @@ function displayHourlyForecast(hourlyData) {
         const hour = dateTime.getHours();
         const temperature = Math.round(item.main.temp - 273.15); // Convert to Celsius
         const iconCode = item.weather[0].icon;
-        const iconUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}`;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
         const hourlyItemHtml = `
             <div class="hourly-item">
