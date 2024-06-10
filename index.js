@@ -1,9 +1,9 @@
 function getWeather() {
     //Please add your own apikey below for this application to work!!
-    const apikey = import.meta.env.weather_api_key;
+    const apikey = import.env.weather_api_key;
     const city = document.getElementById('city').value;
 
-    if (!city) {
+    if (!city) { 
         alert('Please enter a city');
         return;
     }
